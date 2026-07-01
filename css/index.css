@@ -293,17 +293,17 @@ footer p {
     }
 
     .hero-cta {
-         display: flex;
+        display: flex;
         flex-direction: row;  
         gap: 15px;   
-        align-items: center;  
-        justify-content: center;
+        align-items: stretch;
     }
 
-    .hero-cta .btn {
-  flex-shrink: 0; 
-  white-space: nowrap; 
-    }
+
+    .hero-cta .btn-solid {
+    white-space: nowrap; 
+  }
+
 
     .bio {
         padding: 40px 20px;

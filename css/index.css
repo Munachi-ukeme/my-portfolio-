@@ -230,6 +230,29 @@ footer p {
     object-fit: contain;
 }
 
+.audio-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.audio-label {
+    font-size: 13px;
+    color: #0ff4c6;
+    font-family: monospace;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+audio {
+    width: 300px;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    accent-color: #0ff4c6;
+}
+
 /* MOBILE */
 
 @media (max-width: 768px) {

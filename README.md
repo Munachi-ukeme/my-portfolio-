@@ -1,6 +1,6 @@
 # Munachi's Portfolio
 
-A personal portfolio website built as a web development assessment at Miva Open University.
+A personal portfolio website built to showcase my skills and projects as a developer. Designed and built entirely with HTML5, CSS3, and vanilla JavaScript, no frameworks to keep it fast, lightweight, and fully under my control. It highlights who I am, the projects I've worked on, and how to get in touch, all wrapped in a clean, responsive interface that works smoothly across devices.
 
 🔗 **Live Site:** https://munachi-ukeme.github.io/my-portfolio-/
 
@@ -13,7 +13,6 @@ This is my personal portfolio showcasing who I am, my projects, and my journey a
 - **Home** — Introduction and welcome message
 - **About** — Education, career goals, technical skills, and hobbies
 - **Projects** — A showcase of my development work
-- **Planner** — An interactive academic task planner with add, complete, and delete functionality
 - **Contact** — A contact form with real-time validation
 
 ## Built With
@@ -21,7 +20,6 @@ This is my personal portfolio showcasing who I am, my projects, and my journey a
 - HTML5
 - CSS3
 - JavaScript (Vanilla)
-- localStorage (for the planner)
 
 ## Features
 
@@ -33,4 +31,4 @@ This is my personal portfolio showcasing who I am, my projects, and my journey a
 ## Author
 
 **Munachi**
-Cybersecurity Student | MERN Stack Developer
+MERN Stack Developer

@@ -6,7 +6,7 @@ A personal portfolio website built as a web development assessment at Miva Open 
 
 ## About
 
-This is my personal portfolio showcasing who I am, my projects, and my journey as a first-year Cybersecurity student with a background in MERN stack development. My long-term goal is to become a Threat Hunter.
+This is my personal portfolio showcasing who I am, my projects, and my journey as a first-year Cybersecurity student with a background in MERN stack development. My long-term goal is to become a Fullstack Web Engineer and Web Security Engineer.
 
 ## Pages
 
@@ -28,11 +28,9 @@ This is my personal portfolio showcasing who I am, my projects, and my journey a
 - Fully responsive design (desktop, tablet, and mobile)
 - WhatsApp-style bottom navigation bar on mobile
 - Real-time form validation with custom error messages
-- Task planner with persistent storage and XSS protection
 - Active page highlighting in navigation
 
 ## Author
 
 **Munachi**
-Cybersecurity Student | MERN Stack Developer | Aspiring Threat Hunter
-Miva Open University
+Cybersecurity Student | MERN Stack Developer

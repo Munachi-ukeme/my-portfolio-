@@ -239,6 +239,10 @@ footer p {
     padding: 12px 24px;
     border-radius: 8px;
     margin-top: 24px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .btn-download:hover {

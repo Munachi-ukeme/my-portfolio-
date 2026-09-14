@@ -54,7 +54,6 @@ header nav ul {
 .hobbies,
 .certs-grid,
 .projects-grid,
-.planner,
 .contact-section,
 .hero,
 .bio {
@@ -96,8 +95,8 @@ header nav a.active {
 }
 
 .hero-image {
-    width: 140px;
-    height: 140px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #0ff4c6;

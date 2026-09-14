@@ -44,6 +44,7 @@ header nav ul {
     display: flex;
     gap: 32px;
     margin-left: auto;
+    margin-right: auto;
 }
 
 header nav a {
@@ -81,6 +82,22 @@ header nav a.active {
     font-weight: 700;
     color: #e2e8f0;
     margin-bottom: 10px;
+}
+
+.page-intro,
+.education,
+.aspirations,
+.skills,
+.hobbies,
+.certs-grid,
+.projects-grid,
+.planner,
+.contact-section,
+.hero,
+.bio {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .page-intro p {

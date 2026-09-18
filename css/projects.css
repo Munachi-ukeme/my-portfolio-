@@ -26,7 +26,9 @@ img {
     display: block;
 }
 
-/* NAV */
+/* ==========================================================================
+   💎 TOP NAVBAR (PERFECTLY CENTERED ON DESKTOP)
+   ========================================================================== */
 header {
     background-color: #0a0e17;
     border-bottom: 1px solid #2a3a55;
@@ -34,43 +36,41 @@ header {
     height: 65px;
     display: flex;
     align-items: center;
-    justify-content: center; /* 💎 Centering Engine: Forces child elements to align dead center horizontally */
+    justify-content: center; /* Centers the navigation element horizontally */
     position: sticky;
     top: 0;
     z-index: 50;
+    width: 100%;
 }
 
-/* 💎 Added full-width allocation block to ensure child lists can read screen width space */
 header nav {
-    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 header nav ul {
-    list-style: none; /* Safely removes default browser bullet dot offsets */
     display: flex;
     gap: 32px;
-    margin: 0; /* Cleaned out auto margin hacks which can cause pixel alignment bugs */
-    padding: 0;
 }
 
 header nav a {
     font-size: 14px;
-    font-weight: 600; /* Boosted to 600 for sharp readability contrast on dark mode canvas */
-    color: #94a3b8;  /* High-contrast Silver matching your premium cybersecurity scheme */
+    font-weight: 600;
+    color: #94a3b8; /* Crisp silver high-contrast layout text */
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-decoration: none; /* Safely strips native browser underlines */
 }
 
-/* 💎 Fixed immediate color highlight on hover/active states */
 header nav a:hover,
 header nav a.active {
-    color: #0ff4c6; /* Your crisp mint tech green accent */
+    color: #0ff4c6; /* Tech Mint Green active accent color */
 }
 
-
+/* ==========================================================================
+   💎 LAYOUT CONTAINERS
+   ========================================================================== */
 .page-intro,
 .education,
 .aspirations,
@@ -85,17 +85,14 @@ header nav a.active {
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
 }
-
-
-/* BOTTOM NAV - hidden on desktop */
 
 .bottom-nav {
     display: none;
 }
 
 /* PAGE INTRO */
-
 .page-intro {
     padding: 60px 40px 40px;
     border-bottom: 1px solid #2a3a55;
@@ -114,24 +111,25 @@ header nav a.active {
     color: #64748b;
 }
 
-/* PROJECTS GRID */
-
+/* ==========================================================================
+   💎 PROJECTS GRID SYSTEM & CARDS (WIDER & UNIFORM)
+   ========================================================================== */
 .projects-grid {
     padding: 0 40px 60px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
+    display: grid; /* Swapped from flex to grid to guarantee solid card stretching behavior */
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr)); /* Dynamically scales your cards between 460px and 550px based on available container room */
+    gap: 30px;
 }
-
-/* CARD */
 
 .card {
     background-color: #1a2235;
     border: 1px solid #2a3a55;
     border-radius: 12px;
     overflow: hidden;
-    width: 550px;
-    flex-shrink: 0;
+    width: 100%; /* Automatically handles card size allocation inside grid boundaries */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card:hover {
@@ -140,35 +138,38 @@ header nav a.active {
 
 .card img {
     width: 100%;
-    height: 230px;
+    height: 240px;
     object-fit: cover;
     background-color: #222d42;
 }
 
 .card-body {
-    padding: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .card-body h2 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     color: #e2e8f0;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .card-body p {
-    font-size: 14px;
+    font-size: 14.5px;
     color: #94a3b8;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Pushes button and tags neatly to the bottom floor */
 }
 
 /* TECH TAGS */
-
 .tech-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 16px;
+    gap: 8px;
+    margin-bottom: 20px;
 }
 
 .tech-tags li {
@@ -176,14 +177,13 @@ header nav a.active {
     font-weight: 600;
     color: #0ff4c6;
     background-color: #0f2a24;
-    border: 1px solid #0ff4c620;
+    border: 1px solid rgba(15, 244, 198, 0.15);
     border-radius: 99px;
-    padding: 3px 10px;
+    padding: 4px 12px;
     font-family: monospace;
 }
 
 /* VIEW BUTTON */
-
 .btn {
     display: inline-block;
     font-size: 13px;
@@ -191,7 +191,8 @@ header nav a.active {
     color: #0ff4c6;
     border: 1px solid #0ff4c6;
     border-radius: 6px;
-    padding: 6px 14px;
+    padding: 8px 16px;
+    align-self: flex-start; /* Prevents button line from full width stretching stretching */
 }
 
 .btn:hover {
@@ -200,7 +201,6 @@ header nav a.active {
 }
 
 /* FOOTER */
-
 footer {
     border-top: 1px solid #2a3a55;
     padding: 24px 40px;
@@ -231,7 +231,6 @@ footer p {
     border-radius: 50%;
     background-color: #1a2235;
     border: 1px solid #2a3a55;
-    transition: border-color 0.25s;
 }
 
 .social-links a:hover {
@@ -244,51 +243,48 @@ footer p {
     object-fit: contain;
 }
 
-/* MOBILE */
-
+/* ==========================================================================
+   📱 HANDHELD INTERFACES Viewports Adaptation
+   ========================================================================== */
 @media (max-width: 768px) {
-
     header {
         display: none;
     }
 
-  .bottom-nav {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 65px;
-    background-color: #0f172a; 
-    border-top: 1px solid #1e293b;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 50;
-    
-    
-    padding-bottom: env(safe-area-inset-bottom, 0px);
-    height: calc(65px + env(safe-area-inset-bottom, 0px)); 
-}
+    .bottom-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 65px;
+        background-color: #0f172a; 
+        border-top: 1px solid #1e293b;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 50;
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+        height: calc(65px + env(safe-area-inset-bottom, 0px)); 
+    }
 
-.bottom-nav a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    color: #94a3b8; 
-    font-size: 11px; 
-    font-weight: 700; 
-    text-transform: uppercase;
-    letter-spacing: 0.05em; 
-    text-decoration: none; 
-    flex: 1;
-    padding: 8px 0;
-}
+    .bottom-nav a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        color: #94a3b8; 
+        font-size: 11px; 
+        font-weight: 700; 
+        text-transform: uppercase;
+        letter-spacing: 0.05em; 
+        flex: 1;
+        padding: 8px 0;
+    }
 
-.bottom-nav a.active,
-.bottom-nav a:hover {
-    color: #38bdf8; 
-}
+    .bottom-nav a.active,
+    .bottom-nav a:hover {
+        color: #38bdf8; 
+    }
 
     body {
         padding-bottom: 72px;
@@ -304,53 +300,7 @@ footer p {
 
     .projects-grid {
         padding: 0 20px 40px;
-        flex-direction: column;
+        grid-template-columns: 1fr; /* Stacks cards into a single clean column row on mobile viewports */
+        gap: 20px;
     }
-
-    .card {
-        width: 100%;
-    }
-
-    footer {
-    border-top: 1px solid #2a3a55;
-    padding: 24px 40px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-}
-
-footer p {
-    color: #64748b;
-    font-size: 14px;
-}
-
-.social-links {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #1a2235;
-    border: 1px solid #2a3a55;
-    transition: border-color 0.25s;
-}
-
-.social-links a:hover {
-    border-color: #0ff4c6;
-}
-
-.social-links img {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-}
 }

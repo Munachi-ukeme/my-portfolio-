@@ -286,14 +286,13 @@ footer p {
     left: 0;
     right: 0;
     height: 65px;
-    background-color: #0f172a; /* 💎 Swapped to an optimized Deep Midnight Slate */
-    border-top: 1px solid #1e293b; /* Clean, thin structural border edge line */
+    background-color: #0f172a; 
+    border-top: 1px solid #1e293b;
     justify-content: space-around;
     align-items: center;
     z-index: 50;
     
-    /* 📱 SAFE AREA NOTCH PROTECTION: */
-    /* This pushes your navigation buttons safely upward so modern smartphone home indicator bars don't block taps */
+    
     padding-bottom: env(safe-area-inset-bottom, 0px);
     height: calc(65px + env(safe-area-inset-bottom, 0px)); 
 }
@@ -303,21 +302,19 @@ footer p {
     flex-direction: column;
     align-items: center;
     gap: 4px;
-    color: #94a3b8; /* 💎 High-Contrast Silver: Stands out sharply on the dark background canvas */
-    font-size: 11px; /* 💎 Boosted to 11px to stop text blurring on tight mobile screens */
-    font-weight: 700; /* 💎 Bold Weight: Gives thin font pixels the density needed to pop instantly */
+    color: #94a3b8; 
+    font-size: 11px; 
+    font-weight: 700; 
     text-transform: uppercase;
-    letter-spacing: 0.05em; /* Cleaner tracking spacing prevents letter crowding */
-    text-decoration: none; /* Safely strips default browser text underscores */
+    letter-spacing: 0.05em; 
+    text-decoration: none; 
     flex: 1;
     padding: 8px 0;
 }
 
-/* 🟢 ACTIVE PAGE STATE IDENTIFIER */
-/* Apply this active class (or use standard :hover handles) to show exactly where the reader is located */
 .bottom-nav a.active,
 .bottom-nav a:hover {
-    color: #38bdf8; /* 💎 Sky Cyan / Mint: A crisp tech accent color indicating an active selection view */
+    color: #38bdf8; 
 }
 
 

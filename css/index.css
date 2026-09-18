@@ -95,8 +95,8 @@ header nav a.active {
 }
 
 .hero-image {
-    width: 350px;
-    height: 350px;
+    width: 320px;
+    height: 320px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #0ff4c6;
@@ -279,41 +279,47 @@ footer p {
         display: none;
     }
 
-    .bottom-nav {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 65px;
-        background-color: #1a2235;
-        border-top: 1px solid #2a3a55;
-        justify-content: space-around;
-        align-items: center;
-        z-index: 50;
-    }
+   .bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+    background-color: #0f172a; /* 💎 Swapped to an optimized Deep Midnight Slate */
+    border-top: 1px solid #1e293b; /* Clean, thin structural border edge line */
+    justify-content: space-around;
+    align-items: center;
+    z-index: 50;
+    
+    /* 📱 SAFE AREA NOTCH PROTECTION: */
+    /* This pushes your navigation buttons safely upward so modern smartphone home indicator bars don't block taps */
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    height: calc(65px + env(safe-area-inset-bottom, 0px)); 
+}
 
-    .bottom-nav a {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 3px;
-        color: #64748b;
-        font-size: 10px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        flex: 1;
-        padding: 8px 0;
-    }
+.bottom-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: #94a3b8; /* 💎 High-Contrast Silver: Stands out sharply on the dark background canvas */
+    font-size: 11px; /* 💎 Boosted to 11px to stop text blurring on tight mobile screens */
+    font-weight: 700; /* 💎 Bold Weight: Gives thin font pixels the density needed to pop instantly */
+    text-transform: uppercase;
+    letter-spacing: 0.05em; /* Cleaner tracking spacing prevents letter crowding */
+    text-decoration: none; /* Safely strips default browser text underscores */
+    flex: 1;
+    padding: 8px 0;
+}
 
-    .bottom-nav a:hover,
-    .bottom-nav a.active {
-        color: #0ff4c6;
-    }
+/* 🟢 ACTIVE PAGE STATE IDENTIFIER */
+/* Apply this active class (or use standard :hover handles) to show exactly where the reader is located */
+.bottom-nav a.active,
+.bottom-nav a:hover {
+    color: #38bdf8; /* 💎 Sky Cyan / Mint: A crisp tech accent color indicating an active selection view */
+}
 
-    .bottom-nav .nav-icon {
-        font-size: 20px;
-    }
 
     body {
         padding-bottom: 72px;

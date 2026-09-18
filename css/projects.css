@@ -27,7 +27,6 @@ img {
 }
 
 /* NAV */
-
 header {
     background-color: #0a0e17;
     border-bottom: 1px solid #2a3a55;
@@ -35,10 +34,42 @@ header {
     height: 65px;
     display: flex;
     align-items: center;
+    justify-content: center; /* 💎 Centering Engine: Forces child elements to align dead center horizontally */
     position: sticky;
     top: 0;
     z-index: 50;
 }
+
+/* 💎 Added full-width allocation block to ensure child lists can read screen width space */
+header nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul {
+    list-style: none; /* Safely removes default browser bullet dot offsets */
+    display: flex;
+    gap: 32px;
+    margin: 0; /* Cleaned out auto margin hacks which can cause pixel alignment bugs */
+    padding: 0;
+}
+
+header nav a {
+    font-size: 14px;
+    font-weight: 600; /* Boosted to 600 for sharp readability contrast on dark mode canvas */
+    color: #94a3b8;  /* High-contrast Silver matching your premium cybersecurity scheme */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none; /* Safely strips native browser underlines */
+}
+
+/* 💎 Fixed immediate color highlight on hover/active states */
+header nav a:hover,
+header nav a.active {
+    color: #0ff4c6; /* Your crisp mint tech green accent */
+}
+
 
 .page-intro,
 .education,
@@ -56,28 +87,6 @@ header {
     margin-right: auto;
 }
 
-header nav ul {
-    display: flex;
-    gap: 32px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-header nav a {
-    font-size: 14px;
-    font-weight: 500;
-    color: #64748b;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-header nav a:hover {
-    color: #0ff4c6;
-}
-
-header nav a.active {
-    color: #0ff4c6;
-}
 
 /* BOTTOM NAV - hidden on desktop */
 

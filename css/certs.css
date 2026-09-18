@@ -4,30 +4,6 @@
     box-sizing: border-box;
 }
 
-.page-intro,
-.education,
-.aspirations,
-.skills,
-.hobbies,
-.certs-grid,
-.projects-grid,
-.planner,
-.contact-section,
-.hero,
-.bio,
-.intro,
-.flagship,
-.approach,
-.looking-for {
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.aboutme{
-    margin-bottom: 20px;
-}
-
 body {
     background-color: #0a0e17;
     color: #e2e8f0;
@@ -50,9 +26,8 @@ img {
     display: block;
 }
 
-/* ==========================================================================
-   💎 TOP NAVBAR (PERFECTLY CENTERED ON DESKTOP)
-   ========================================================================== */
+/* NAV */
+
 header {
     background-color: #0a0e17;
     border-bottom: 1px solid #2a3a55;
@@ -60,244 +35,146 @@ header {
     height: 65px;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centers child structural wrappers horizontally */
     position: sticky;
     top: 0;
     z-index: 50;
-    width: 100%;
-}
-
-header nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
 }
 
 header nav ul {
     display: flex;
     gap: 32px;
-    margin: 0; /* Cleans out auto-margin blocks that collapse containers */
-    padding: 0;
+    margin-left: auto;
 }
 
 header nav a {
     font-size: 14px;
-    font-weight: 600; /* Higher structural pixel weight for dark mode */
-    color: #94a3b8;  /* Crisp high-contrast silver matches cybersecurity motif */
+    font-weight: 500;
+    color: #64748b;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-header nav a:hover,
+header nav a:hover {
+    color: #0ff4c6;
+}
+
 header nav a.active {
     color: #0ff4c6;
 }
 
 /* BOTTOM NAV - hidden on desktop */
+
 .bottom-nav {
     display: none;
 }
 
 /* PAGE INTRO */
 
-/* INTRO */
-.intro {
-    padding: 40px 40px 0;
+.page-intro {
+    padding: 60px 40px 40px;
+    border-bottom: 1px solid #2a3a55;
+    margin-bottom: 48px;
 }
 
-.intro p {
+.page-intro h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 10px;
+}
+
+.page-intro p {
     font-size: 16px;
-    color: #94a3b8;
-    max-width: 640px;
+    color: #64748b;
 }
 
-.intro strong {
-    color: #0ff4c6;
-    font-weight: 600;
-}
+/* CERTS GRID */
 
-/* FLAGSHIP */
-.flagship {
-    padding: 0 40px 48px;
-    border-top: 1px solid #2a3a55;
-    padding-top: 48px;
-}
-
-.flagship h2 {
-    font-size: 24px;
-    font-weight: 700;
-    color: #e2e8f0;
-    margin-bottom: 16px;
-}
-
-.flagship p {
-    font-size: 15px;
-    color: #94a3b8;
-    max-width: 640px;
-    margin-bottom: 14px;
-}
-
-.flagship strong {
-    color: #0ff4c6;
-    font-weight: 600;
-}
-
-/* APPROACH */
-.approach {
-    padding: 0 40px 48px;
-    border-top: 1px solid #2a3a55;
-    padding-top: 48px;
-}
-
-.approach h2 {
-    font-size: 24px;
-    font-weight: 700;
-    color: #e2e8f0;
-    margin-bottom: 16px;
-}
-
-.approach p {
-    font-size: 15px;
-    color: #94a3b8;
-    max-width: 640px;
-}
-
-/* LOOKING FOR */
-.looking-for {
-    padding: 48px 40px;
-    border-top: 1px solid #2a3a55;
-}
-
-.looking-for h2 {
-    font-size: 24px;
-    font-weight: 700;
-    color: #e2e8f0;
-    margin-bottom: 16px;
-}
-
-.looking-for p {
-    font-size: 15px;
-    color: #94a3b8;
-    max-width: 640px;
-    margin-bottom: 20px;
-}
-
-.cv-btn-wrapper {
-    margin-top: 8px;
-}
-
-.btn-download {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #0ff4c6;
-    color: #0a0e17;
-    font-weight: 600;
-    font-size: 14px;
-    border-radius: 8px;
-    transition: opacity 0.25s;
-}
-
-.btn-download:hover {
-    opacity: 0.85;
-}
-
-/* SKILLS */
-.skills {
-    padding: 48px 40px;
-    border-top: 1px solid #2a3a55;
-}
-
-.skills h2 {
-    font-size: 24px;
-    font-weight: 700;
-    color: #e2e8f0;
-    margin-bottom: 24px;
-}
-
-.skills-grid {
+.certs-grid {
+    padding: 0 40px 60px;
     display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 800px;
 }
 
-.skill-group {
+/* CERT CARD */
+
+.cert-card {
     background-color: #1a2235;
     border: 1px solid #2a3a55;
-    border-radius: 10px;
-    padding: 20px;
-    min-width: 200px;
-    flex: 1;
+    border-radius: 12px;
+    padding: 28px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
 }
 
-.skill-group h3 {
-    font-size: 13px;
-    font-weight: 700;
-    color: #0ff4c6;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 14px;
-    font-family: monospace;
+.cert-card:hover {
+    border-color: #0ff4c6;
 }
 
-.skill-group ul {
+/* ICON */
+
+.cert-icon {
+    font-size: 40px;
+    flex-shrink: 0;
+}
+
+/* BODY */
+
+.cert-body {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.skill-group li {
-    font-size: 14px;
-    color: #94a3b8;
-    padding-left: 14px;
-    position: relative;
-}
-
-.skill-group li::before {
-    content: '▸';
-    position: absolute;
-    left: 0;
-    color: #0ff4c6;
-    font-size: 11px;
-    top: 3px;
-}
-
-/* HOBBIES */
-.hobbies {
-    padding: 48px 40px;
-    border-top: 1px solid #2a3a55;
-}
-
-.hobbies h2 {
-    font-size: 24px;
+.cert-body h2 {
+    font-size: 20px;
     font-weight: 700;
     color: #e2e8f0;
-    margin-bottom: 20px;
 }
 
-.hobbies ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.hobbies li {
-    font-size: 15px;
-    color: #94a3b8;
-    padding-left: 18px;
-    position: relative;
-}
-
-.hobbies li::before {
-    content: '▸';
-    position: absolute;
-    left: 0;
+.cert-issuer {
+    font-size: 14px;
     color: #0ff4c6;
-    font-size: 11px;
-    top: 4px;
+    font-family: monospace;
+}
+
+.cert-date {
+    font-size: 13px;
+    color: #64748b;
+    font-family: monospace;
+}
+
+.cert-desc {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-top: 4px;
+}
+
+/* VIEW BUTTON */
+
+.btn-cert {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #0ff4c6;
+    border: 1px solid #0ff4c6;
+    border-radius: 6px;
+    padding: 6px 16px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.btn-cert:hover {
+    background-color: #0ff4c6;
+    color: #0a0e17;
 }
 
 /* FOOTER */
+
 footer {
     border-top: 1px solid #2a3a55;
     padding: 24px 40px;
@@ -328,7 +205,6 @@ footer p {
     border-radius: 50%;
     background-color: #1a2235;
     border: 1px solid #2a3a55;
-    transition: border-color 0.25s;
 }
 
 .social-links a:hover {
@@ -341,15 +217,14 @@ footer p {
     object-fit: contain;
 }
 
-/* ==========================================================================
-   📱 MOBILE RESPONSIVE MEDIA QUERIES
-   ========================================================================== */
+/* MOBILE */
+
 @media (max-width: 768px) {
+
     header {
         display: none;
     }
-
-    .bottom-nav {
+ .bottom-nav {
         display: flex;
         position: fixed;
         bottom: 0;
@@ -397,62 +272,16 @@ footer p {
         font-size: 28px;
     }
 
-    .education,
-    .aspirations,
-    .skills,
-    .hobbies,
-    .intro,
-    .flagship,
-    .approach,
-    .looking-for {
-        padding-left: 20px;
-        padding-right: 20px;
+    .certs-grid {
+        padding: 0 20px 40px;
     }
 
-    .skills-grid {
+    .cert-card {
         flex-direction: column;
-    }
-
-    footer {
-        border-top: 1px solid #2a3a55;
-        padding: 24px 40px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: 16px;
     }
 
-    footer p {
-        color: #64748b;
-        font-size: 14px;
-    }
-
-    .social-links {
-        display: flex;
-        gap: 20px;
-        align-items: center;
-    }
-
-    .social-links a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: #1a2235;
-        border: 1px solid #2a3a55;
-        transition: border-color 0.25s;
-    }
-
-    .social-links a:hover {
-        border-color: #0ff4c6;
-    }
-
-    .social-links img {
-        width: 20px;
-        height: 20px;
-        object-fit: contain;
+    footer {
+        padding: 20px;
     }
 }

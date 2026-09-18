@@ -409,6 +409,10 @@ footer p {
         padding-right: 20px;
     }
 
+    .skill-group{
+        margin-bottom: 10px;
+    }
+
     .skills-grid {
         flex-direction: column;
     }

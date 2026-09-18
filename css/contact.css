@@ -36,33 +36,39 @@ header {
     height: 65px;
     display: flex;
     align-items: center;
+    justify-content: center; /* 💎 Centers child items dead-center horizontally */
     position: sticky;
     top: 0;
     z-index: 50;
+    width: 100%;
 }
- 
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 header nav ul {
     display: flex;
     gap: 32px;
-    margin-left: auto;
+    margin: 0; /* Cleaned out auto margin hacks that collapse containers */
+    padding: 0;
 }
- 
+
 header nav a {
     font-size: 14px;
-    font-weight: 500;
-    color: #64748b;
+    font-weight: 600; /* Boosted for sharp tech contrast legibility */
+    color: #94a3b8;  /* Higher contrast silver matching premium portfolio assets */
     text-transform: uppercase;
     letter-spacing: 1px;
 }
- 
-header nav a:hover {
-    color: #0ff4c6;
-}
- 
+
+header nav a:hover,
 header nav a.active {
     color: #0ff4c6;
 }
- 
 /* BOTTOM NAV - hidden on desktop */
  
 .bottom-nav {
@@ -107,7 +113,7 @@ header nav a.active {
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 3px;
 }
  
 .form-group label {

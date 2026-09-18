@@ -77,7 +77,6 @@ header nav a.active {
 .skills,
 .hobbies,
 .certs-grid,
-.projects-grid,
 .planner,
 .contact-section,
 .hero,
@@ -115,10 +114,12 @@ header nav a.active {
    💎 PROJECTS GRID SYSTEM & CARDS (WIDER & UNIFORM)
    ========================================================================== */
 .projects-grid {
-       padding: 0 40px 60px;
+     max-width: 1400px; 
+    margin: 0 auto; 
+    padding: 0 40px 60px;
     display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    gap: 24px; /* Reduced slightly to give cards more breathing room side-by-side */
+    grid-template-columns: 1fr 1fr 1fr; /* Solid 3-column split */
+    gap: 30px;
 }
 
 .card {

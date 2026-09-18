@@ -26,8 +26,9 @@ img {
     display: block;
 }
 
-/* NAV */
-
+/* ==========================================================================
+   💎 TOP NAVBAR (PERFECTLY CENTERED ON DESKTOP)
+   ========================================================================== */
 header {
     background-color: #0a0e17;
     border-bottom: 1px solid #2a3a55;
@@ -35,18 +36,43 @@ header {
     height: 65px;
     display: flex;
     align-items: center;
+    justify-content: center; /* 💎 Centers child structural wrappers horizontally */
     position: sticky;
     top: 0;
     z-index: 50;
+    width: 100%;
+}
+
+header nav {
+    display: flex;
+    justify-content: center; /* 💎 Forces list items dead-center horizontally */
+    align-items: center;
+    width: 100%;
 }
 
 header nav ul {
     display: flex;
     gap: 32px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0; /* 💎 Cleaned out auto-margin blocks that collapse containers */
+    padding: 0;
 }
 
+header nav a {
+    font-size: 14px;
+    font-weight: 600; /* Higher structural pixel weight for dark mode */
+    color: #94a3b8;  /* Enhanced silver gray contrast color matching your motif */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header nav a:hover,
+header nav a.active {
+    color: #0ff4c6;
+}
+
+/* ==========================================================================
+   💎 LAYOUT CONTAINERS
+   ========================================================================== */
 .page-intro,
 .education,
 .aspirations,
@@ -60,32 +86,17 @@ header nav ul {
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
-}
-
-header nav a {
-    font-size: 14px;
-    font-weight: 500;
-    color: #64748b;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-header nav a:hover {
-    color: #0ff4c6;
-}
-
-header nav a.active {
-    color: #0ff4c6;
+    width: 100%;
 }
 
 /* BOTTOM NAV - hidden on desktop */
-
 .bottom-nav {
     display: none;
 }
 
-/* HERO */
-
+/* ==========================================================================
+   💎 HERO VIEWPORT
+   ========================================================================== */
 .hero {
     min-height: 90vh;
     display: flex;
@@ -120,8 +131,6 @@ header nav a.active {
     margin-bottom: 16px;
 }
 
-
-
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
@@ -148,6 +157,7 @@ header nav a.active {
     border-radius: 8px;
     display: inline-block;
     width: 180px;
+    text-align: center;
 }
 .btn {
     background-color: #0ff4c6;
@@ -158,6 +168,7 @@ header nav a.active {
     border-radius: 8px;
     display: inline-block;
     width: 180px;
+    text-align: center;
 }
 
 .btn-solid:hover {
@@ -173,6 +184,7 @@ header nav a.active {
     border-radius: 8px;
     border: 1px solid #0ff4c6;
     display: inline-block;
+    text-align: center;
 }
 
 .btn-outline:hover {
@@ -180,8 +192,9 @@ header nav a.active {
     color: #0a0e17;
 }
 
-/* BIO */
-
+/* ==========================================================================
+   💎 BIO SECTION
+   ========================================================================== */
 .bio {
     padding: 60px 40px;
     border-top: 1px solid #2a3a55;
@@ -201,8 +214,9 @@ header nav a.active {
     margin-bottom: 16px;
 }
 
-/* FOOTER */
-
+/* ==========================================================================
+   💎 GLOBAL FOOTER BLOCKS
+   ========================================================================== */
 footer {
     border-top: 1px solid #2a3a55;
     padding: 24px 40px;
@@ -271,52 +285,49 @@ footer p {
     background-color: #0bb89a;
 }
 
-/* MOBILE */
-
+/* ==========================================================================
+   📱 MOBILE RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
 @media (max-width: 768px) {
-
     header {
         display: none;
     }
 
-   .bottom-nav {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 65px;
-    background-color: #0f172a; 
-    border-top: 1px solid #1e293b;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 50;
-    
-    
-    padding-bottom: env(safe-area-inset-bottom, 0px);
-    height: calc(65px + env(safe-area-inset-bottom, 0px)); 
-}
+    .bottom-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 65px;
+        background-color: #0f172a; 
+        border-top: 1px solid #1e293b;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 50;
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+        height: calc(65px + env(safe-area-inset-bottom, 0px)); 
+    }
 
-.bottom-nav a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    color: #94a3b8; 
-    font-size: 11px; 
-    font-weight: 700; 
-    text-transform: uppercase;
-    letter-spacing: 0.05em; 
-    text-decoration: none; 
-    flex: 1;
-    padding: 8px 0;
-}
+    .bottom-nav a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        color: #94a3b8; 
+        font-size: 11px; 
+        font-weight: 700; 
+        text-transform: uppercase;
+        letter-spacing: 0.05em; 
+        text-decoration: none; 
+        flex: 1;
+        padding: 8px 0;
+    }
 
-.bottom-nav a.active,
-.bottom-nav a:hover {
-    color: #38bdf8; 
-}
-
+    .bottom-nav a.active,
+    .bottom-nav a:hover {
+        color: #38bdf8; 
+    }
 
     body {
         padding-bottom: 72px;
@@ -343,56 +354,54 @@ footer p {
         align-items: stretch;
     }
 
-
     .hero-cta .btn-solid {
-    white-space: nowrap; 
-  }
-
+        white-space: nowrap; 
+    }
 
     .bio {
         padding: 40px 20px;
     }
 
     footer {
-    border-top: 1px solid #2a3a55;
-    padding: 24px 40px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-}
+        border-top: 1px solid #2a3a55;
+        padding: 24px 40px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
 
-footer p {
-    color: #64748b;
-    font-size: 14px;
-}
+    footer p {
+        color: #64748b;
+        font-size: 14px;
+    }
 
-.social-links {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
+    .social-links {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
 
-.social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #1a2235;
-    border: 1px solid #2a3a55;
-    transition: border-color 0.25s;
-}
+    .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #1a2235;
+        border: 1px solid #2a3a55;
+        transition: border-color 0.25s;
+    }
 
-.social-links a:hover {
-    border-color: #0ff4c6;
-}
+    .social-links a:hover {
+        border-color: #0ff4c6;
+    }
 
-.social-links img {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-}
+    .social-links img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+    }
 }

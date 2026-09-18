@@ -50,8 +50,9 @@ img {
     display: block;
 }
 
-/* NAV */
-
+/* ==========================================================================
+   💎 TOP NAVBAR (PERFECTLY CENTERED ON DESKTOP)
+   ========================================================================== */
 header {
     background-color: #0a0e17;
     border-bottom: 1px solid #2a3a55;
@@ -59,37 +60,41 @@ header {
     height: 65px;
     display: flex;
     align-items: center;
+    justify-content: center; /* 💎 Centers child items dead-center horizontally */
     position: sticky;
     top: 0;
     z-index: 50;
+    width: 100%;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 header nav ul {
     display: flex;
     gap: 32px;
-    margin-left: auto;
-    margin-right: auto;
-
+    margin: 0; /* Cleaned out auto margin hacks that collapse containers */
+    padding: 0;
 }
 
 header nav a {
     font-size: 14px;
-    font-weight: 500;
-    color: #64748b;
+    font-weight: 600; /* Boosted for sharp tech contrast legibility */
+    color: #94a3b8;  /* Higher contrast silver matching premium portfolio assets */
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-header nav a:hover {
-    color: #0ff4c6;
-}
-
+header nav a:hover,
 header nav a.active {
     color: #0ff4c6;
 }
 
 /* BOTTOM NAV - hidden on desktop */
-
 .bottom-nav {
     display: none;
 }
@@ -97,7 +102,6 @@ header nav a.active {
 /* PAGE INTRO */
 
 /* INTRO */
-
 .intro {
     padding: 40px 40px 0;
 }
@@ -114,7 +118,6 @@ header nav a.active {
 }
 
 /* FLAGSHIP */
-
 .flagship {
     padding: 0 40px 48px;
     border-top: 1px solid #2a3a55;
@@ -141,7 +144,6 @@ header nav a.active {
 }
 
 /* APPROACH */
-
 .approach {
     padding: 0 40px 48px;
     border-top: 1px solid #2a3a55;
@@ -162,7 +164,6 @@ header nav a.active {
 }
 
 /* LOOKING FOR */
-
 .looking-for {
     padding: 48px 40px;
     border-top: 1px solid #2a3a55;
@@ -200,8 +201,8 @@ header nav a.active {
 .btn-download:hover {
     opacity: 0.85;
 }
-/* SKILLS */
 
+/* SKILLS */
 .skills {
     padding: 48px 40px;
     border-top: 1px solid #2a3a55;
@@ -262,7 +263,6 @@ header nav a.active {
 }
 
 /* HOBBIES */
-
 .hobbies {
     padding: 48px 40px;
     border-top: 1px solid #2a3a55;
@@ -298,7 +298,6 @@ header nav a.active {
 }
 
 /* FOOTER */
-
 footer {
     border-top: 1px solid #2a3a55;
     padding: 24px 40px;
@@ -342,51 +341,49 @@ footer p {
     object-fit: contain;
 }
 
-/* MOBILE */
-
+/* ==========================================================================
+   📱 MOBILE RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
 @media (max-width: 768px) {
-
     header {
         display: none;
     }
 
-  .bottom-nav {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 65px;
-    background-color: #0f172a; 
-    border-top: 1px solid #1e293b;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 50;
-    
-    
-    padding-bottom: env(safe-area-inset-bottom, 0px);
-    height: calc(65px + env(safe-area-inset-bottom, 0px)); 
-}
+    .bottom-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 65px;
+        background-color: #0f172a; 
+        border-top: 1px solid #1e293b;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 50;
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+        height: calc(65px + env(safe-area-inset-bottom, 0px)); 
+    }
 
-.bottom-nav a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    color: #94a3b8; 
-    font-size: 11px; 
-    font-weight: 700; 
-    text-transform: uppercase;
-    letter-spacing: 0.05em; 
-    text-decoration: none; 
-    flex: 1;
-    padding: 8px 0;
-}
+    .bottom-nav a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        color: #94a3b8; 
+        font-size: 11px; 
+        font-weight: 700; 
+        text-transform: uppercase;
+        letter-spacing: 0.05em; 
+        text-decoration: none; 
+        flex: 1;
+        padding: 8px 0;
+    }
 
-.bottom-nav a.active,
-.bottom-nav a:hover {
-    color: #38bdf8; 
-}
+    .bottom-nav a.active,
+    .bottom-nav a:hover {
+        color: #38bdf8; 
+    }
 
     body {
         padding-bottom: 72px;
@@ -400,62 +397,62 @@ footer p {
         font-size: 28px;
     }
 
-   .education,
-.aspirations,
-.skills,
-.hobbies,
-.intro,
-.flagship,
-.approach,
-.looking-for {
-    padding-left: 20px;
-    padding-right: 20px;
-}
+    .education,
+    .aspirations,
+    .skills,
+    .hobbies,
+    .intro,
+    .flagship,
+    .approach,
+    .looking-for {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 
     .skills-grid {
         flex-direction: column;
     }
 
     footer {
-    border-top: 1px solid #2a3a55;
-    padding: 24px 40px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-}
+        border-top: 1px solid #2a3a55;
+        padding: 24px 40px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
 
-footer p {
-    color: #64748b;
-    font-size: 14px;
-}
+    footer p {
+        color: #64748b;
+        font-size: 14px;
+    }
 
-.social-links {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
+    .social-links {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
 
-.social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #1a2235;
-    border: 1px solid #2a3a55;
-    transition: border-color 0.25s;
-}
+    .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #1a2235;
+        border: 1px solid #2a3a55;
+        transition: border-color 0.25s;
+    }
 
-.social-links a:hover {
-    border-color: #0ff4c6;
-}
+    .social-links a:hover {
+        border-color: #0ff4c6;
+    }
 
-.social-links img {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-}
+    .social-links img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+    }
 }

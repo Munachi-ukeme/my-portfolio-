@@ -299,8 +299,9 @@ footer p {
     }
 
     .projects-grid {
-        padding: 0 20px 40px;
-        grid-template-columns: 1fr; /* Stacks cards into a single clean column row on mobile viewports */
-        gap: 20px;
+    padding: 0 40px 60px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 24px;
     }
 }

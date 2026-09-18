@@ -301,7 +301,7 @@ footer p {
     .projects-grid {
     padding: 0 40px 60px;
     display: grid; 
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr; 
     gap: 24px;
     }
 }

@@ -115,10 +115,10 @@ header nav a.active {
    💎 PROJECTS GRID SYSTEM & CARDS (WIDER & UNIFORM)
    ========================================================================== */
 .projects-grid {
-    padding: 0 40px 60px;
-    display: grid; /* Swapped from flex to grid to guarantee solid card stretching behavior */
-    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr)); /* Dynamically scales your cards between 460px and 550px based on available container room */
-    gap: 30px;
+       padding: 0 40px 60px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 24px; /* Reduced slightly to give cards more breathing room side-by-side */
 }
 
 .card {
@@ -299,9 +299,8 @@ footer p {
     }
 
     .projects-grid {
-    padding: 0 40px 60px;
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    gap: 24px;
+    padding: 0 20px 40px;
+        grid-template-columns: 1fr; /* Stacks cards into a single clean column row on mobile viewports */
+        gap: 20px;
     }
 }

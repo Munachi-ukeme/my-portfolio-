@@ -374,24 +374,32 @@ function initContactForm() {
 
   /* --- FORM SUBMIT --- */
   form.addEventListener('submit', (event) => {
-
-    /* Stop the browser's default behaviour (page refresh) */
     event.preventDefault();
 
-    if (!validateForm()) return;  /* stop if validation fails */
+    if (!validateForm()) return;
 
-    /* Simulate a successful submission */
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending...';
 
-    /* In a real project you would send the data to a server here.
-       For now we wait 1.5 seconds and show a success message. */
-    setTimeout(() => {
-
-      successMsg.classList.add('visible');
-      form.reset();             /* clears all fields */
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Send Message';
+    fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+        if (response.ok) {
+            successMsg.classList.add('visible');
+            form.reset();
+        } else {
+            alert('Something went wrong. Please try again.');
+        }
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+    })
+    .catch(() => {
+        alert('Network error. Please try again.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
 
       /* Hide the success message after 5 seconds */
       setTimeout(() => {

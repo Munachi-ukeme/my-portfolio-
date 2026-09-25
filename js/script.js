@@ -406,7 +406,7 @@ function initContactForm() {
         successMsg.classList.remove('visible');
       }, 2000);
 
-    }, 1500);
+    });
 
   });
 

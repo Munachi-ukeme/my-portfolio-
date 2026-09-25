@@ -390,6 +390,11 @@ function initContactForm() {
         if (response.ok) {
             successMsg.classList.add('visible');
             form.reset();
+
+            // Hide the success message after 5 seconds (5000ms)
+            setTimeout(() => {
+                successMsg.classList.remove('visible');
+            }, 5000); 
         } else {
             alert('Something went wrong. Please try again.');
         }
@@ -400,15 +405,8 @@ function initContactForm() {
         alert('Network error. Please try again.');
         submitBtn.disabled = false;
         submitBtn.textContent = 'Send Message';
-
-      /* Hide the success message after 5 seconds */
-      setTimeout(() => {
-        successMsg.classList.remove('visible');
-      }, 2000);
-
     });
-
-  });
+});
 
 }
 

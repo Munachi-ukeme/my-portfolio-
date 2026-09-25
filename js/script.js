@@ -404,7 +404,7 @@ function initContactForm() {
       /* Hide the success message after 5 seconds */
       setTimeout(() => {
         successMsg.classList.remove('visible');
-      }, 5000);
+      }, 2000);
 
     }, 1500);
 
